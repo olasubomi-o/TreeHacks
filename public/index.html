@@ -18,11 +18,11 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link href="css/styles.css" rel="stylesheet">
     <title>Socket.IO chat</title>
-    <h1 >Names are overrated</h1>
+    <h1 >Website name</h1>
     
   </head>
   <body>
-    <div class= "container">
+    
     <style> 
       body { margin: 0; padding-bottom: 3rem; margin-left: 40rem;font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
       #form { background: rgba(0, 0, 0, 0.15);margin-left: 40rem; padding: 0.25rem; position: fixed; bottom: 0; left: 0; right: 0; display: flex; height: 3rem; box-sizing: border-box; backdrop-filter: blur(10px); }
@@ -40,7 +40,7 @@
       <button>Send</button>
       <button type="button" data-toggle="modal" data-target="#exampleModal"><i class="material-icons">videogame_asset</i></button>
     </form> 
-    <div class="modal fade" style="margin-top: 10rem" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
@@ -53,10 +53,10 @@
             <div class="container">
               <div class="row">
                 <div class="col-sm">
-                  <img src="cah.png" class="img-fluid "width="500" height="500" data-dismiss="modal" alt="Cards Against Humanity">
+                  <img sre="cah.png" class="img-fluid" data-dismiss="modal" alt="Cards Against Humanity">
                 </div>
                 <div class="col-sm">
-                  <img src="wnrs.png" class="img-fluid " width="500" height="500" data-dismiss="modal"  alt="We're Not Really Strangers">
+                  <img src="wnrs.png" class="img-fluid"data-dismiss="modal"  alt="We're Not Really Strangers">
                 </div>
               </div>
             </div>
@@ -86,12 +86,10 @@
 
       socket.on('chat message', function(msg) {
         var item = document.createElement('li');
-        item.textContent = "User: " + msg;
+        item.textContent = msg;
         messages.appendChild(item);
         window.scrollTo(0, document.body.scrollHeight);
       });
     </script>
-    </div>
-    
   </body>
 </html>
